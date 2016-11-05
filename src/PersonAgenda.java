@@ -38,9 +38,10 @@ public class PersonAgenda {
             String name = SkeletonJava.readStringConsole("Input the name:");
             String number = SkeletonJava.readStringConsole("Input the number:");
 
-            Person p = new Person();
-            p.name=name;
-            p.phoneNumber=number;
+            Person p = new Person(436436);
+//            p.name=name;
+//            p.phoneNumber=number;
+            p.setAge(-45);
             listName[index] = p;
             index++;
         }
