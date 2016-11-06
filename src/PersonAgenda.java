@@ -1,9 +1,15 @@
+import p.Person;
+
 public class PersonAgenda {
 
     static Person[] listName = new Person[2]; // store the names
     static int index=0;
 
     public static void main(String[] args) {
+
+        PersonAgenda agendaTelefon = new PersonAgenda();
+        PersonAgenda agendaPeHartie = new PersonAgenda();
+
         System.out.println("Hello World!");
         int option=0;
 
@@ -18,7 +24,7 @@ public class PersonAgenda {
             option=SkeletonJava.readIntConsole("Option:");
 
             switch (option) {
-                case 1: add();break;
+                case 1: agendaTelefon.add();break;
                 case 2: print();break;
             }
 
@@ -28,7 +34,7 @@ public class PersonAgenda {
 
     }
 
-    static void add() {
+     void add() {
 
         // de optimizat cand se umple agenda
 
@@ -41,7 +47,7 @@ public class PersonAgenda {
             Person p = new Person(436436);
 //            p.name=name;
 //            p.phoneNumber=number;
-            p.setAge(-45);
+            //p.setAge(-45);
             listName[index] = p;
             index++;
         }

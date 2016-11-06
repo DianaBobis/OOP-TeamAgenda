@@ -1,10 +1,42 @@
+package p;
+
 /**
  * Created by icondor on 29/10/16.
  */
 public class Person {
 
+    // fields, or data memebers , put them PRIVATE all the time
+    int age;
+    private int anulNasterii;
+    private String name;
+    private String phoneNumber;
+    private long cnp;
+    private CI ci;
 
-    // methods
+
+    //constructor
+    public Person(long cnp) {
+        System.out.println("person constructor with args");
+        this.cnp = cnp;
+    }
+
+    // default constructor, it will not be created if you have at least one with params , see above
+    public Person() {
+        System.out.println("person default constructor");
+    }
+
+
+    // getter
+    public int getAnulNasterii() {
+        return anulNasterii;
+    }
+
+    //setter
+    public void setAnulNasterii(int anulNasterii) {
+        this.anulNasterii = anulNasterii;
+    }
+
+
     public String getName() {
         return name;
     }
@@ -22,13 +54,9 @@ public class Person {
     }
 
     public int getAge() {
+        age = 2018 - anulNasterii;
         return age;
     }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
 
     public void sing() {
         // defualt
@@ -48,17 +76,9 @@ public class Person {
 
     }
 
-    private void singCore()
-    {
+    private void singCore() {
         //chestii comune
     }
-
-    // fields, data members
-    private String name;
-    private String phoneNumber;
-    private int age;
-    private long cnp;
-    private CI ci;
 
     public CI getCi() {
         return ci;
@@ -68,24 +88,12 @@ public class Person {
         this.ci = ci;
     }
 
-
-
-
     public long getCnp() {
         return cnp;
     }
 
     public void setCnp(long cnp) {
         this.cnp = cnp;
-    }
-
-    Person(long cnp) {
-        System.out.println("cucu bau s-a creat persoana");
-        this.cnp=cnp;
-    }
-
-    Person() {
-        System.out.println("cucu bau");
     }
 
 }
